@@ -627,23 +627,12 @@ function PreviewStep({
               : lang === 'ko' ? '복사하기' : 'Copy'}
           </button>
 
-          {shareId ? (
-            <button
-              onClick={handleCopyShareLink}
-              className="w-full py-3 border border-stone-200 rounded-full font-sans text-sm text-stone-600 hover:border-stone-400 transition-colors"
-            >
-              {shareCopied
-                ? lang === 'ko' ? '링크 복사됐어요' : 'Link copied!'
-                : lang === 'ko' ? '공유 링크 복사하기' : 'Copy share link'}
-            </button>
-          ) : (
-            <button
-              onClick={handleShare}
-              className="w-full py-3 border border-stone-200 rounded-full font-sans text-sm text-stone-600 hover:border-stone-400 transition-colors"
-            >
-              {lang === 'ko' ? '링크로 공유하기' : 'Share as link'}
-            </button>
-          )}
+          <button
+            disabled
+            className="w-full py-3 border border-stone-100 rounded-full font-sans text-sm text-stone-300 cursor-not-allowed"
+          >
+            {lang === 'ko' ? '링크로 공유하기 (준비 중)' : 'Share as link (coming soon)'}
+          </button>
         </div>
       )}
     </div>
