@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${lora.variable} ${inter.variable} h-full`}>
+      <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5758614344932113" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-full bg-stone-50 text-stone-800 antialiased">
         {children}
       </body>
